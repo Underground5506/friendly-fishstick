@@ -1,0 +1,28 @@
+2. Optimization: Get 100% of your low-end hardware
+
+Solutions that i found:
+
+- Install zRAM (Better RAM management):
+It compresses data in your RAM to avoid using the slow SSD/HDD swap.
+
+Ubuntu / Debian:
+sudo apt install zram-tools
+
+Arch Linux:
+sudo pacman -S zram-tools
+
+- Hardware Acceleration (Fixing Software Rendering):
+If your CPU is doing the GPU's job, your PC will be slow and hot. You need the right drivers.
+
+Intel GPU:
+Ubuntu/Debian: sudo apt install intel-media-driver-non-free
+Arch: sudo pacman -S intel-media-driver
+
+AMD GPU (Debian based):
+Download the script from AMD website and run:
+sudo apt install ./amdgpu-install_*.deb
+sudo amdgpu-install -y --usecase=graphics,rocm
+sudo usermod -a -G render,video $LOGNAME
+
+ What OS affected: 
+Linux based OS (Low-end hardware focus)
