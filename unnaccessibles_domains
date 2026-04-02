@@ -1,0 +1,17 @@
+4.unnaccesible domains 
+
+problem: when you try to connect to some apps or website it will not work but your pc is connected to internet 
+
+the fix that i found:
+in windows :
+   there is a config files in windows that cause the problem C:\Windows\System32\drivers\etc\hosts delete it and you are good to go 
+
+  explanation:
+   the files host have one job it tells your windows system to connect to 127.0.0.1 ,that means himself .in other words it is like you tell a uber deliver to deliver to send it to where he is
+
+in linux 
+   it is the same procedure but the acces path is /etc/hosts/
+
+!!!!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!
+THIS FILE IS REALLY SENSIBLE AND IT MAY BLOCK ACCES TO INTERNET IF YOU ARE NOT SURE KEEP IT EMPTY UNLESS YOU NEED TO BLOCK SOME DOMAIN
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
